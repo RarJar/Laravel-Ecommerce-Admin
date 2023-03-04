@@ -5,7 +5,7 @@
     <div class="right_col min-vh-100">
         <div class="row">
             <div class="col-md-12">
-                <div class="x_panel bg-light">
+                <div class="x_panel">
                     <div class="x_title">
                         <h2>အမျိုးအစားအားပြင်ဆင်ရန်</h2>
                         <ul class="nav navbar-right panel_toolbox">
@@ -16,9 +16,8 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
-                        <form action="{{route('category@updateCategory')}}" method="post" class="modal-dialog" enctype="multipart/form-data">
+                        <form action="{{route('category@updateCategory')}}" method="post" enctype="multipart/form-data">
                             @csrf
-                            <div class="modal-content">
                             <div class="modal-body">
                                 <div class="mb-3">
                                     <label class="col-form-label">ဓာတ်ပုံ</label> <br>
@@ -43,7 +42,6 @@
                             <div class="modal-footer">
                                 <a href="{{route('category@categoryListPage')}}" class="btn btn-sm btn-danger">မလုပ်တော့ပါ</a>
                                 <button type="submit" class="btn btn-sm btn-success">သိမ်းမည်</button>
-                            </div>
                             </div>
                         </form>
                     </div>

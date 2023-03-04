@@ -27,9 +27,16 @@ Route::middleware(['auth'])->group(function () {
     
     Route::controller(ProductController::class)->group(function () {
         Route::get('/productListPage', 'productListPage')->name('product@productListPage');
+        Route::get('/addNewProductPage', 'addNewProductPage')->name('product@addNewProductPage');
+        Route::post('/addNewProduct', 'addNewProduct')->name('product@addNewProduct');
+        Route::get('/updateProductPage/{token}', 'updateProductPage')->name('product@updateProductPage');
+        Route::post('/updateProduct', 'updateProduct')->name('product@updateProduct');
+        Route::get('/removeImage_in_updatePage/{imageName}', 'removeImage_in_updatePage')->name('product@removeImage_in_updatePage');
+        Route::get('/deleteProduct/{token}', 'deleteProduct')->name('product@deleteProduct');
     });
     
     Route::controller(AjaxController::class)->group(function () {
         Route::get('/searchCategory', 'searchCategory');
+        Route::get('/searchProduct', 'searchProduct');
     });
 });
